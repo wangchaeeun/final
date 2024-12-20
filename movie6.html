@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IO: 라스트 온 어스</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- X 닫기 버튼 -->
+    <button class="close-button" onclick="goBack()">×</button>
+    <div class="movie-details">
+      <img src="img/6.png" alt="오블리비언 포스터" class="movie-poster" />
+      <div class="movie-info">
+        <h1>오블리비언</h1>
+        <p>
+          <strong>장르</strong><br />
+          SF, 포스트 아포칼립스, 액션
+        </p>
+        <p>
+          <strong>출연</strong><br />
+          톰 크루즈, 모건 프리먼, 올가 쿠릴렌코, 안드레아 라이즈보로 외
+        </p>
+        <p>
+          <strong>배급사</strong><br />
+          NETFLIX
+        </p>
+        <p>
+          <strong>줄거리</strong><br />
+          외계인의 침공으로 황폐화된 지구, 인류는 대부분 타이탄으로 이주했다.
+          정찰병 잭 하퍼는 지구에 남아 드론을 수리하며 자원을 채취하는 임무를
+          수행한다. 그러나 잭은 자신이 알고 있던 세계와 임무의 진실에 의문을
+          품게 되고, 우연히 생존자를 만나면서 인류와 지구의 운명을 바꿀 선택을
+          마주한다.
+        </p>
+        <a
+          href="https://www.netflix.com/search?q=%EC%98%A4%EB%B8%94%EB%A6%AC&jbv=70259170"
+          target="_blank"
+          class="watch-button"
+          >보러가기</a
+        >
+      </div>
+    </div>
+    <script>
+      function goBack() {
+        window.history.back(); // 이전 페이지로 이동
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IO: 라스트 온 어스</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- X 닫기 버튼 -->
+    <button class="close-button" onclick="goBack()">×</button>
+    <div class="movie-details">
+      <img src="img/1.png" alt="IO 포스터" class="movie-poster" />
+      <div class="movie-info">
+        <h1>IO: 라스트 온 어스</h1>
+        <p>
+          <strong>장르</strong><br />
+          SF, 재난
+        </p>
+        <p>
+          <strong>출연</strong><br />
+          마거릿 퀄리, 앤서니 매키 외
+        </p>
+        <p>
+          <strong>배급사</strong><br />
+          NETFLIX
+        </p>
+        <p>
+          <strong>줄거리</strong><br />
+          환경 파괴와 대기 오염으로 지구가 생존 불가능한 상태가 되자, 인류는
+          대규모로 우주로 이주했다.<br />
+          그러나 과학자 샘은 지구를 포기하지 않고, 남아 있는 마지막 생명체를
+          연구하며 희망을 찾는다.<br />
+          그녀는 한 방문객과 함께 생존의 가능성을 확인하며 새로운 선택의 기로에
+          선다.
+        </p>
+        <a
+          href="https://www.netflix.com/search?q=io&jbv=80134721"
+          target="_blank"
+          class="watch-button"
+          >보러가기</a
+        >
+      </div>
+    </div>
+    <script>
+      function goBack() {
+        window.history.back(); // 이전 페이지로 이동
+      }
+    </script>
+  </body>
+</html>

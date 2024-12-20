@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IO: 라스트 온 어스</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- X 닫기 버튼 -->
+    <button class="close-button" onclick="goBack()">×</button>
+    <div class="movie-details">
+      <img src="img/5.png" alt="좀비랜드 포스터" class="movie-poster" />
+      <div class="movie-info">
+        <h1>좀비랜드</h1>
+        <p>
+          <strong>장르</strong><br />
+          액션, 공포, 호러, 포스트 아포칼립스, 코미디
+        </p>
+        <p>
+          <strong>출연</strong><br />
+          우디 해럴슨, 제시 아이젠버그, 엠마 스톤, 아비게일 브레스린 외
+        </p>
+        <p>
+          <strong>배급사</strong><br />
+          NETFLIX
+        </p>
+        <p>
+          <strong>줄거리</strong><br />
+          알 수 없는 바이러스가 전 세계로 퍼지며 인류 대부분이 좀비로 변했다.
+          생존자 콜럼버스는 살아남기 위해 자신만의 규칙을 세우고, 터프한
+          탈라해시와 독특한 자매인 위치타, 리틀록과 함께 우연히 팀을 이룬다.
+          각자의 목표를 이루기 위해 떠난 여정 속에서, 그들은 서로에게 가족
+          이상의 의미가 되어간다.
+        </p>
+        <a
+          href="https://www.netflix.com/search?q=%EC%A2%80%EB%B9%84%EB%9E%9C%EB%93%9C&jbv=70123542"
+          target="_blank"
+          class="watch-button"
+          >보러가기</a
+        >
+      </div>
+    </div>
+    <script>
+      function goBack() {
+        window.history.back(); // 이전 페이지로 이동
+      }
+    </script>
+  </body>
+</html>

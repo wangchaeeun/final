@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>버드 박스</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- X 닫기 버튼 -->
+    <button class="close-button" onclick="goBack()">×</button>
+    <div class="movie-details">
+      <img src="img/23.png" alt="버드 박스 포스터" class="movie-poster" />
+      <div class="movie-info">
+        <h1>버드 박스</h1>
+        <p>
+          <strong>장르</strong><br />
+          스릴러, 드라마, 공포, SF, 재난, 포스트 아포칼립스, 코즈믹 호러
+        </p>
+        <p>
+          <strong>출연</strong><br />
+          산드라 블록, 트로반테 로즈, 존 말코비치, 다니엘 맥도널드, 사라 폴슨 외
+        </p>
+        <p>
+          <strong>배급사</strong><br />
+          NETFLIX
+        </p>
+        <p>
+          <strong>줄거리</strong><br />
+          미지의 존재가 나타나 사람들에게 환각과 자살 충동을 일으키며 전 세계가
+          혼란에 빠진다. 생존자들은 눈을 가리고 외부 환경을 보지 않으며 살아남기
+          위해 고군분투한다. 주인공 말로리는 두 아이와 함께 안전한 피난처를 찾아
+          목숨을 건 여행을 시작한다. 강렬한 위협 속에서 그녀는 살아남기 위해
+          극한의 결단을 내린다.
+        </p>
+        <a
+          href="https://www.netflix.com/search?q=%EB%B2%84%EB%93%9C%EB%B0%95%EC%8A%A4&jbv=80196789"
+          target="_blank"
+          class="watch-button"
+          >보러가기</a
+        >
+      </div>
+    </div>
+    <script>
+      function goBack() {
+        window.history.back(); // 이전 페이지로 이동
+      }
+    </script>
+  </body>
+</html>

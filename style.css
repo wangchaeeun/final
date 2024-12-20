@@ -1,0 +1,635 @@
+@font-face {
+  font-family: "NoWhareHouse"; /* 폰트에 사용할 이름 */
+  src: url("fonts/myFont.ttf") format("truetype"); /* 폰트 파일 경로 */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.gif-title h1 {
+  font-family: "NoWhareHouse", Arial, sans-serif; /* 제목 폰트 */
+  color: transparent; /* 글자를 투명하게 설정 */
+  background: url("img/b.gif") repeat;
+  background-size: 200px 200px; /* GIF 크기 */
+  background-clip: text; /* 글자만 배경 표시 */
+  -webkit-background-clip: text; /* 웹킷 브라우저 지원 */
+  animation: moveBackground 5s linear infinite; /* 애니메이션 속도 */
+  font-size: 110px; /* 기본 폰트 크기 */
+  text-align: center; /* 가운데 정렬 */
+  margin: 30px auto; /* 상하 여백 */
+  line-height: 1.2; /* 기본 줄 간격 */
+  position: relative;
+  z-index: 10; /* 텍스트를 이미지 위로 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  overflow-x: hidden; /* 가로 스크롤 제거 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  position: relative;
+}
+
+.top-image {
+  width: 210px;
+  height: auto;
+  margin-top: 50px;
+  position: relative;
+  top: 20px;
+  left: 1px;
+  z-index: 5; /* main.png가 앞에 표시되도록 설정 */
+}
+
+.middle-image {
+  max-width: 100%; /* 25.png의 크기 */
+  height: auto;
+  position: absolute; /* 절대 위치 설정 */
+  top: 300px !important; /* main.png와 겹치도록 위치 조정 */
+  left: 0;
+  z-index: 0; /* main.png 뒤에 배치 */
+  opacity: 0.9; /* 약간 투명하게 설정 */
+}
+
+.text-box {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 300px; /* 25.png와 텍스트 사이 간격 조정 */
+  font-weight: bold;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 한 줄에 5개씩 배치 */
+  gap: 20px; /* 이미지 간 간격 */
+  margin-top: 100px; /* 텍스트와의 간격 조정 */
+  padding: 0 10px; /* 좌우 여백 추가 */
+  width: calc(100% - 20px); /* 패딩 포함한 너비 계산 */
+  max-width: 1200px; /* 최대 너비 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+  box-sizing: border-box; /* 패딩 포함한 박스 크기 계산 */
+}
+
+.image-grid img {
+  width: auto; /* 각 이미지 크기 */
+  height: 150px; /* 비율 유지 */
+  max-width: 100%; /* 부모 요소 초과 방지 */
+  display: block;
+  border-radius: 5px; /* 모서리 둥글게 */
+}
+
+.text-box2 {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 100px; /* 25.png와 텍스트 사이 간격 조정 */
+  color: #ffffff;
+  z-index: 1;
+}
+.graph-image {
+  margin-top: 100px; /* 설명 텍스트와 그래프 간격 */
+  margin-bottom: 40px; /* 설명 텍스트와 그래프 간격 */
+  text-align: center; /* 그래프 이미지를 중앙 정렬 */
+}
+
+.graph-image-1 {
+  width: 50%; /* g1.png 크기 */
+  height: auto; /* 비율 유지 */
+  margin: 20px auto; /* 중앙 정렬 */
+  display: block; /* 블록 요소 */
+}
+
+.graph-image-2 {
+  width: 80% !important; /* 크기 강제 */
+  height: auto !important; /* 비율 유지 강제 */
+  margin: 20px auto !important; /* 중앙 정렬 강제 */
+}
+
+.text-box3 {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 50px; /* 25.png와 텍스트 사이 간격 조정 */
+  font-weight: bold;
+  color: #ffffff;
+  z-index: 2;
+}
+.image-grid2 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 한 줄에 7개씩 배치 */
+  gap: 20px; /* 이미지 간 간격 */
+  margin-top: 100px; /* 위쪽 간격 */
+  margin-bottom: 50px; /* 하단 간격 추가 */
+  padding: 20px;
+  width: 80%; /* 그리드 전체 폭 */
+  z-index: 1;
+}
+.image-grid2 img {
+  width: 100px; /* 각 이미지 크기 */
+  height: auto; /* 비율 유지 */
+  max-width: 100%; /* 부모 요소 초과 방지 */
+  display: block;
+  border-radius: 5px; /* 모서리 둥글게 */
+  margin: 0 auto; /* 중앙 정렬 */
+}
+.text-box4 {
+  text-align: center;
+  font-size: 18px;
+  margin: 50px auto; /* 텍스트를 화면 중앙으로, 상단 간격 넓힘 */
+  padding: 0 30px; /* 좌우 여백 추가 */
+  line-height: 1.6;
+  max-width: 800px; /* 텍스트 최대 너비 */
+}
+
+.movie-details {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  color: white;
+}
+
+.movie-poster {
+  width: 300px;
+  height: auto;
+  margin-top: 40px;
+  margin-right: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+.movie-info {
+  display: flex;
+  flex-direction: column; /* 텍스트를 세로로 정렬 */
+  justify-content: center; /* 텍스트 중앙 정렬 */
+  margin-top: 10px;
+  max-width: 600px; /* 텍스트 영역 최대 너비 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+}
+
+.movie-info p {
+  font-size: 14px; /* 폰트 크기 */
+  line-height: 1.5; /* 줄 간격 */
+  margin-bottom: 8px; /* 문단 간 간격 */
+  color: #ffffff; /* 흰색 계열 텍스트 */
+}
+
+.close-button {
+  position: fixed; /* 화면 상단 고정 */
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 30px; /* X 크기 */
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000; /* 다른 요소 위에 표시 */
+}
+
+.close-button:hover {
+  color: red; /* 마우스 오버 시 색상 */
+  transform: scale(1.2); /* 마우스 오버 시 크기 확대 */
+  transition: 0.3s; /* 애니메이션 효과 */
+}
+.watch-button {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  text-decoration: none; /* 밑줄 제거 */
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.watch-button:hover {
+  background-color: darkred; /* 마우스 오버 시 색상 변경 */
+  transform: scale(1.1); /* 버튼 크기 확대 */
+  transition: 0.3s; /* 애니메이션 효과 */
+}
+.footer {
+  width: 100%;
+  background-color: black; /* 푸터 배경색 */
+  color: white; /* 텍스트 색상 */
+  text-align: center; /* 중앙 정렬 */
+  padding: 15px 20px; /* 위아래 15px, 양옆 20px */
+  border-top: 1px solid white; /* 상단 구분선 */
+  font-size: 14px; /* 텍스트 크기 */
+  line-height: 1.4; /* 줄 간격 */
+}
+
+.footer p {
+  margin: 5px 0; /* 문단 간 간격 */
+}
+
+.footer a {
+  color: white; /* 링크 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  margin: 0 10px; /* 링크 간 간격 */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* 마우스 오버 시 밑줄 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  position: relative;
+}
+
+.top-image {
+  max-width: 70%;
+  height: auto;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1; /* main.png가 앞에 표시되도록 설정 */
+}
+
+.middle-image {
+  max-width: 100%; /* 25.png의 크기 */
+  height: auto;
+  position: absolute; /* 절대 위치 설정 */
+  top: 200px; /* main.png와 겹치도록 위치 조정 */
+  left: 0;
+  z-index: 0; /* main.png 뒤에 배치 */
+  opacity: 0.9; /* 약간 투명하게 설정 */
+}
+
+.text-box {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 300px; /* 25.png와 텍스트 사이 간격 조정 */
+  font-weight: bold;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 한 줄에 5개씩 배치 */
+  gap: 20px; /* 이미지 간 간격 */
+  margin-top: 100px; /* 텍스트와의 간격 조정 */
+  padding: 20px;
+  width: 80%; /* 그리드 전체 폭 */
+  z-index: 1;
+}
+
+.hover-effect {
+  width: 150px; /* 기본 이미지 크기 */
+  height: auto; /* 비율 유지 */
+  border-radius: 8px; /* 모서리 둥글게 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 확대와 그림자 효과 부드럽게 */
+}
+
+.hover-effect:hover {
+  transform: scale(1.1); /* 마우스 올릴 때 1.1배 확대 */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7); /* 확대 시 그림자 강조 */
+}
+
+.image-grid img {
+  width: auto; /* 각 이미지 크기 */
+  height: 150px; /* 비율 유지 */
+  border-radius: 5px; /* 모서리 둥글게 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
+}
+.text-box2 {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 100px; /* 25.png와 텍스트 사이 간격 조정 */
+  color: #ffffff;
+  z-index: 1;
+}
+.graph-image {
+  margin-top: 100px; /* 설명 텍스트와 그래프 간격 */
+  margin-bottom: 40px; /* 설명 텍스트와 그래프 간격 */
+  text-align: center; /* 그래프 이미지를 중앙 정렬 */
+}
+
+.graph-image img {
+  width: 50%;
+  height: auto;
+  margin: 20px auto; /* 중앙 정렬 */
+  display: block;
+}
+
+.text-box3 {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 50px; /* 25.png와 텍스트 사이 간격 조정 */
+  font-weight: bold;
+  color: #ffffff;
+  z-index: 2;
+}
+.image-grid2 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 한 줄에 5개씩 배치 */
+  gap: 20px; /* 이미지 간 간격 */
+  margin-top: 100px; /* 텍스트와의 간격 조정 */
+  padding: 20px;
+  width: 80%; /* 그리드 전체 폭 */
+  z-index: 1;
+}
+
+.image-grid2 img {
+  width: 100px; /* 각 이미지 크기 */
+  height: auto; /* 비율 유지 */
+  border-radius: 5px; /* 모서리 둥글게 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
+}
+.text-box4 {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px auto; /* 텍스트를 화면 중앙으로 */
+  padding: 0 30px; /* 좌우 여백 추가 */
+  line-height: 1.6;
+  max-width: 800px; /* 텍스트 최대 너비 */
+}
+.movie-details {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  color: white;
+}
+
+.movie-poster {
+  width: 300px;
+  height: auto;
+  margin-top: 40px;
+  margin-right: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+.movie-info {
+  display: flex;
+  flex-direction: column; /* 텍스트를 세로로 정렬 */
+  justify-content: center; /* 텍스트 중앙 정렬 */
+  margin-top: 10px;
+  max-width: 600px; /* 텍스트 영역 최대 너비 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+}
+
+.movie-info p {
+  font-size: 14px; /* 폰트 크기 */
+  line-height: 1.5; /* 줄 간격 */
+  margin-bottom: 8px; /* 문단 간 간격 */
+  color: #ffffff; /* 흰색 계열 텍스트 */
+}
+
+.close-button {
+  position: fixed; /* 화면 상단 고정 */
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 30px; /* X 크기 */
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000; /* 다른 요소 위에 표시 */
+}
+
+.close-button:hover {
+  color: red; /* 마우스 오버 시 색상 */
+  transform: scale(1.2); /* 마우스 오버 시 크기 확대 */
+  transition: 0.3s; /* 애니메이션 효과 */
+}
+.watch-button {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  text-decoration: none; /* 밑줄 제거 */
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.watch-button:hover {
+  background-color: darkred; /* 마우스 오버 시 색상 변경 */
+  transform: scale(1.1); /* 버튼 크기 확대 */
+  transition: 0.3s; /* 애니메이션 효과 */
+}
+.footer {
+  width: 100%;
+  background-color: black; /* 푸터 배경색 */
+  color: white; /* 텍스트 색상 */
+  text-align: center; /* 중앙 정렬 */
+  padding: 15px 20px; /* 위아래 15px, 양옆 20px */
+  border-top: 1px solid white; /* 상단 구분선 */
+  font-size: 14px; /* 텍스트 크기 */
+  line-height: 1.4; /* 줄 간격 */
+}
+
+.footer p {
+  margin: 5px 0; /* 문단 간 간격 */
+}
+
+.footer a {
+  color: white; /* 링크 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  margin: 0 10px; /* 링크 간 간격 */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* 마우스 오버 시 밑줄 */
+}
+
+@media screen and (max-width: 768px) {
+  .gif-title h1 {
+    font-size: 60px; /* 모바일 폰트 크기 줄임 */
+    line-height: 1.5; /* 줄 간격 늘림 */
+    text-align: center;
+  }
+
+  .gif-title h1:nth-child(2) {
+    margin-top: 10px; /* 두 번째 줄 여백 추가 */
+  }
+
+  .gif-title h1:nth-child(3) {
+    display: block; /* 세 번째 줄 독립 */
+    margin-top: 10px; /* 줄 사이 간격 조정 */
+  }
+  .top-image {
+    width: 30%; /* 모바일에서 적당히 줄어든 크기 */
+    height: auto; /* 비율 유지 */
+    margin: 20px auto; /* 중앙 정렬 */
+    display: block; /* 블록 요소로 설정 */
+  }
+  .middle-image {
+    width: 250%; /* 모바일에서 이미지 크기 확대 */
+    max-width: none; /* max-width 제한 해제 */
+    height: auto; /* 비율 유지 */
+    position: absolute; /* 절대 위치 */
+    top: 200px; /* 모바일에서 이미지의 상단 위치 */
+    left: 50%; /* 화면 가운데 정렬 */
+    transform: translateX(-50%); /* 중앙 정렬 */
+    z-index: -1; /* 텍스트 뒤로 배치 */
+    opacity: 0.9; /* 약간 투명하게 설정 */
+  }
+
+  .image-grid,
+  .image-grid2 {
+    grid-template-columns: repeat(2, 1fr); /* 한 줄에 2개씩 배치 */
+    row-gap: 20px; /* 위아래 간격 축소 */
+    column-gap: 10px; /* 좌우 간격 축소 */
+    padding: 0 10px; /* 좌우 여백 축소 */
+  }
+
+  .image-grid img,
+  .image-grid2 img {
+    width: 90%; /* 이미지 크기 조정 */
+    height: auto;
+    margin: 0 auto; /* 이미지 중앙 정렬 */
+    display: block;
+    border-radius: 5px;
+  }
+
+  .text-box,
+  .text-box3 {
+    font-size: 38px; /* 폰트 크기 확대 */
+    line-height: 2; /* 줄 간격 조정 */
+    text-align: center; /* 중앙 정렬 */
+    margin-top: 50px; /* 상단 여백 조정 */
+  }
+
+  .text-box2 {
+    font-size: 16px; /* 텍스트 크기 */
+    line-height: 1.6;
+    text-align: center;
+    margin: 20px auto;
+    margin-top: 70px; /* 상단 여백 추가 */
+    max-width: 85%;
+    padding: 0 15px; /* 양옆 패딩 추가 */
+    box-sizing: border-box;
+  }
+
+  .text-box4 {
+    font-size: 16px; /* 텍스트 크기 */
+    line-height: 1.6;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 85%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .graph-image img {
+    width: 90%;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .graph-image-1 {
+    width: 90% !important;
+    margin: 30px auto !important;
+  }
+  .graph-image-2 {
+    width: 100% !important;
+    margin: 30px auto !important;
+  }
+
+  .movie-details {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    padding: 20px 0; /* 좌우 여백 제거 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+  }
+
+  .movie-poster {
+    width: 80%; /* 모바일에서 포스터 너비 조정 */
+    margin-bottom: 20px; /* 포스터와 텍스트 간격 */
+    margin-left: 0; /* 좌측 여백 제거 */
+    margin-right: 0; /* 우측 여백 제거 */
+  }
+
+  .movie-info {
+    max-width: 100%; /* 텍스트가 화면을 꽉 차지 않도록 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+  }
+
+  .movie-info h1 {
+    font-size: 24px; /* 제목 크기 조정 */
+  }
+
+  .movie-info p {
+    font-size: 14px; /* 모바일 텍스트 크기 */
+    line-height: 1.4; /* 모바일 줄 간격 */
+    padding: 0 30px; /* 모바일 양옆 여백 */
+  }
+
+  .close-button {
+    position: fixed; /* 화면 상단 고정 */
+    top: 10px; /* 상단 여백 */
+    right: 10px; /* 오른쪽 여백 */
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 40px; /* X 버튼 크기 확대 */
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000; /* 다른 요소 위에 표시 */
+  }
+
+  .close-button:hover {
+    color: red; /* 마우스 오버 시 색상 변경 */
+    transform: scale(1.3); /* 마우스 오버 시 크기 확대 */
+    transition: 0.3s; /* 애니메이션 효과 */
+  }
+
+  .watch-button {
+    display: block; /* 버튼을 블록 요소로 설정 */
+    margin: 20px auto; /* 버튼을 가운데 정렬 */
+    background-color: red;
+    color: white;
+    text-decoration: none; /* 밑줄 제거 */
+    padding: 12px 20px; /* 버튼 크기 조정 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    font-size: 18px; /* 버튼 텍스트 크기 */
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .watch-button:hover {
+    background-color: darkred; /* 마우스 오버 시 색상 변경 */
+    transform: scale(1.1); /* 버튼 크기 확대 */
+    transition: 0.3s; /* 애니메이션 효과 */
+  }
+
+  .footer {
+    font-size: 12px; /* 푸터 텍스트 크기 축소 */
+    line-height: 1.4; /* 줄 간격 축소 */
+    padding: 10px 0; /* 상하 여백 축소 */
+  }
+
+  .footer p {
+    margin: 8px 0; /* 문단 간 여백 약간 증가 */
+  }
+
+  .footer a {
+    margin: 0 5px; /* 모바일에서 링크 간 간격 줄임 */
+  }
+}
